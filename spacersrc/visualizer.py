@@ -67,7 +67,9 @@ def visualize_data(data, title='Data Visualization', max_label_length=30,
     for rect, label, color, font_size in zip(rects, labels, colors, font_sizes):
         x, y, dx, dy = rect['x'], rect['y'], rect['dx'], rect['dy']
         ax.add_patch(plt.Rectangle((x, y), dx, dy, facecolor=color, edgecolor="white", linewidth=2))
-        ax.text(x + dx/2, y + dy/2, label, va='center', ha='center', fontsize=font_size, color='black', weight='bold', bbox=dict(facecolor='white', alpha=0.6, edgecolor='none'))
+        # Ensure label fits within the rectangle
+        if dx > 5 and dy > 5:  # Ensure the label fits comfortably within the rectangle
+            ax.text(x + dx/2, y + dy/2, label, va='center', ha='center', fontsize=font_size, color='black', weight='bold', bbox=dict(facecolor='white', alpha=0.6, edgecolor='none'))
     
     # Add title
     plt.title(title, fontsize=16)
