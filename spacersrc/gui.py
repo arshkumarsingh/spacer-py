@@ -2,7 +2,7 @@
 
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from spacersrc.analyzer import scan_directory
+from spacersrc.analyzer import scan_and_format_directory, scan_directory
 from spacersrc.visualizer import visualize_data
 
 def select_directory():
