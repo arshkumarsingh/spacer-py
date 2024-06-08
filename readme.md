@@ -7,12 +7,21 @@ SpacerPy is a Python application that visualizes disk usage in a directory using
 - Treemap visualization of disk usage.
 - Dynamic font sizes and color gradients for better readability.
 - Error handling for robust performance.
+- Includes file sizes at the top level of the selected directory.
+- Sizes are formatted for better readability (e.g., KB, MB, GB).
 
 ## Requirements
 
 - Python 3.6+
 - Required Python packages are listed in `requirements.txt`.
 
+## Contributing
+
+- Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+
+## License
+
+- This project is licensed under the MIT License. See the LICENSE file for details.
 ## Installation
 
 1. Clone the repository:
